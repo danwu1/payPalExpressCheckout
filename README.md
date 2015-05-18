@@ -7,7 +7,7 @@ paypal expressCheckout API test
   	- password:   WC9XUE6EFB6XENH9  
   	- signature:  AFcWxV21C7fd0v3bYYYRCpSSRl31AUnKrpLarT3mNnErha7DL-iKOgS4  
   - buyer account:  
-  	- wudanxxx-buyer@gmail.com  
+  	- userName:   wudanxxx-buyer@gmail.com  
 	- password:   1213175839  
 
 2. The website is using Amazon EC2 services and can be visited at 52.25.120.237
