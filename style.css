@@ -1,0 +1,25 @@
+/*index.php*/
+.shoppingCart{border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(212, 210, 207);
+				border-top-width: 1px; border-top-style:solid;border-top-color: rgb(212, 210, 207)}
+
+.orderSummary{float:right; margin-right:50px;}
+
+.orderTotal{border-top-width: 1px; border-top-style:solid;border-top-color: rgb(212, 210, 207)}
+
+.dl-horizontal dt{text-align: left;}
+
+.dl-horizontal dd{text-align: right;}
+
+/*review.php*/
+.title{border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(212, 210, 207);
+				margin-bottom: 20px}
+
+.confirmButton{float:right; padding-right:10px; padding-bottom: 100px; padding-top:20px;}
+
+.paymentDetails{border-width: 1px; border-style: solid; border-color: rgb(212, 210, 207);
+				margin-top: 20px}
+
+.paymentDetails > .outerWrapper{margin-bottom:20px; margin-top:20px; height: 200px;}
+
+.paymentDetails >.div2{border-right-width: 1px; border-right-style: solid; border-right-color: rgb(212, 210, 207);
+						border-left-width: 1px; border-left-style: solid; border-left-color: rgb(212, 210, 207)}

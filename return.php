@@ -1,6 +1,24 @@
 <?php 
 	require_once("config.php");
 	require_once ("expressCheckoutAPI.php"); 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>OrderComplete!</title>
+
+</head>
+</html>
+
+<?php
 	
 	/*
 	* Calls the DoExpressCheckoutPayment API call
@@ -13,7 +31,8 @@
 	if( $ack == "SUCCESS" || $ack == "SUCCESSWITHWARNING" )
 	{
 		?>
-			<h4>Thank you! Your order is complete.</h4>
+			<div class= "container title"><h1>Confirmation</h1></div>
+			<div class= "container well"><h4>Thank you! Your order is complete.</h4></div>
 		<?php
 	}
 	else  

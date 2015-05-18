@@ -2,7 +2,24 @@
 
 	require_once("config.php");
 	require_once("expressCheckoutAPI.php");
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>ExpressCheckOut</title>
+
+</head>
+</html>
+
+<?php
 	$token = $_SESSION["TOKEN"];
 	if ( $token != "" )
 	{
@@ -37,25 +54,27 @@
 ?>
 <html>
 <body>
-	<div class="review-order"><h1>Review &amp; Submit Order</h1></div>
-	<div class="review-order"><p><strong>You're almost done!</strong><br>Review your information before you place your order.</p></div>
-	<div class="review-box">
-		<div class="review-detail address " style="height: 144px;padding-top:0px"><h3>Shipping Address</h3><?php echo "</br>".$shipToName."</br>".$shipToStreet."</br>".$shipToCity."</br>".$shipToState."</br>".$shipToCntryCode."</br>".$shipToZip;	?></div>
-		<div class="review-detail shipping " style="height: 144px;padding-top:0px"><h3>Shipping Method</h3><p>Standard<br>Delivery in 3-5 business days following shipment</p></div>
-		<div class="review-detail payment  open" style="height: 144px;padding-top:0px"><h3>Selected Payment</h3><p>PayPal Account</br><?php echo $email ?></p></div>
+	<div class="container title"><h1>Review &amp; Submit Order</h1></div>
+	<div class="container well"><h4><strong>You're almost done!</strong></h4><p>Review your information before you place your order.</p></div>
+	<div class="container paymentDetails">
+		<div class="container outerWrapper div1 col-sm-4"><div class="container"><h3>Shipping Address</h3><?php echo "</br>".$shipToName."</br>".$shipToStreet."</br>".$shipToCity."</br>".$shipToState."</br>".$shipToCntryCode."</br>".$shipToZip;	?></div></div>
+		<div class="container outerWrapper div2 col-sm-4"><div class="container"><h3>Shipping Method</h3><p>Standard<br>Delivery in 3-5 business days following shipment</p></div></div>
+		<div class="container outerWrapper div3 col-sm-4"><div class="container"><h3>Selected Payment</h3><p>PayPal Account</br><?php echo $email ?></p></div></div>
 	</div>
 	</br>
 	</br>
-	<table>
-		<tr><td>Subtotal:</td><td><?php echo $itemAmt."  ".$currencyCode?>	  </td></tr>
-		<tr><td>Shipping:</td><td><?php echo $shippingAmt."  ".$currencyCode?></td></tr>
-		<tr><td>Tax:</td><td><?php echo $tax."  ".$currencyCode?></td></tr>
-		<tr><td>&nbsp;</td></tr>
-		<tr><td>Order total:</td><td><?php echo $totalAmt."  ".$currencyCode?></td></tr>
-		<form action="return.php" name="order_confirm" method="POST">
-			<tr><td><input type="Submit" name="confirm" value="Confirm Order"></td></tr>
-		</form>
-	</table>
+	<div class="container orderSummary col-sm-3">
+		<div class = "row"><dl class="dl-horizontal">
+			<dt> Subtotal:</dt><dd><?php echo $itemAmt."  ".$currencyCode; ?></dd>
+			<dt class="info"> Shipping:</dt><dd><?php echo $shippingAmt."  ".$currencyCode; ?></dd>
+			<dt class="info"> Estimated Tax</dt><dd><?php echo $tax."  ".$currencyCode?></dd></dl>
+		</div>
+		<div class = "row"><dl class="dl-horizontal orderTotal"><dt> Order Total</dt><dd><?php echo $totalAmt."  ".$currencyCode; ?></dd></dl></div>
+		<div class = "row confirmButton">
+			<form action="return.php" method="POST"><input type="Submit" value="Confirm Order" class = "btn btn-success"></form>
+		</div>
+	</div>
+
 </body>
 </html>
 
