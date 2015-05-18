@@ -2,11 +2,11 @@ paypal expressCheckout API test
 
 #Introudction
 1. This API test is running under the payPal sandbox envorinment with the following accounts:
-  *merchant account:
+  --merchant account:
       userName:   wudanxxx-facilitator_api1.gmail.com
       password:   WC9XUE6EFB6XENH9
       signature:  AFcWxV21C7fd0v3bYYYRCpSSRl31AUnKrpLarT3mNnErha7DL-iKOgS4 
-  *buyer account:
+  --buyer account:
       wudanxxx-buyer@gmail.com
       password:   1213175839
 
