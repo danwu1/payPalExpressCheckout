@@ -5,7 +5,7 @@ paypal expressCheckout API test
   *merchant account:
       userName:   wudanxxx-facilitator_api1.gmail.com
       password:   WC9XUE6EFB6XENH9
-      signature:  AFcWxV21C7fd0v3bYYYRCpSSRl31AUnKrpLarT3mNnErha7DL-iKOgS4
+      signature:  AFcWxV21C7fd0v3bYYYRCpSSRl31AUnKrpLarT3mNnErha7DL-iKOgS4 
   *buyer account:
       wudanxxx-buyer@gmail.com
       password:   1213175839
